@@ -2,13 +2,15 @@ Task Management Mobile App - Client Requirements
 
 
 1. Project Idea
+   
 This application is designed to help users manage their daily tasks efficiently. Users can add tasks by entering a task description and setting a due date. Once tasks are added, they will be listed on the screen, where users can easily update or delete them. The goal is to provide a simple and intuitive interface that allows users to keep track of their to-dos and deadlines without technical complications.
 
 
 
 
 
-2. Domain Details
+3. Domain Details
+
 The main entity in this application is the Task. Each task will have the following fields:
 
 Task Description (string): A brief description of what the task entails.
@@ -21,7 +23,8 @@ Priority (string): An optional field where the user can mark the task as "low," 
 
 
 
-3. CRUD Operations (3 points)
+3. CRUD Operations
+   
 Each operation follows the Create, Read, Update, and Delete (CRUD) model. Here's how they function for the Task entity:
 
 Create: 
@@ -41,11 +44,9 @@ Delete: Users can remove any task from the list by pressing the "Delete" button.
 
 4. Persistence Details
 
-Local Database:
-The app will store all CRUD operations (create, read, update, and delete) in the local database. This ensures that tasks are accessible even when the device is offline.
+Local Database: The app will store all CRUD operations (create, read, update, and delete) in the local database. This ensures that tasks are accessible even when the device is offline.
 
-Server:
-When the device is online, tasks will also be synced with the server. The server will persist:
+Server: When the device is online, tasks will also be synced with the server. The server will persist:
 	Create: New tasks added will be saved on the server.
 	Update: Any changes to tasks will be synced with the server.
 	Delete: When tasks are deleted, they will also be removed from the server.
@@ -54,8 +55,7 @@ When the device is online, tasks will also be synced with the server. The server
 
 
 
-5. Offline Scenarios
-When the device is offline, the app will continue to function as follows:
+5. Offline Scenarios: When the device is offline, the app will continue to function as follows:
 
 Create: 
 Users can still add tasks, and these will be stored in the local database. Once the device comes back online, the app will sync the new tasks with the server.
